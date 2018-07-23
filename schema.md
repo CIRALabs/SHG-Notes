@@ -35,6 +35,7 @@ administrators
 --------------
 
 Schema:
+```
 {
 "url"   : "/api/v1/administrator/123",
 "name"  : "firstname lastname",
@@ -45,6 +46,7 @@ Schema:
 "lastlogin" : "2012-04-23T18:25:43.511Z",
 "publickey" : "base64-of-subjectpublicinfo-from-rfc5280",
 }
+```
 
 1. /api/v1/administrators - return an array of entities with permissions.
 
@@ -60,6 +62,7 @@ devices
 -------
 
 Schema:
+```
 {
 "url"      : "/api/v1/devices/123",
 "macaddres": "aa-bb-cc-00-11-22",
@@ -82,6 +85,7 @@ Schema:
 "lan-incoming-ports"   : [ list-of-ports ],
 "wan-incoming-ports"   : [ list-of-ports ],
 }
+```
 
 Any of the items below the cut may be omitted or may be null, in
 which case the value would be taken from the security-profile.
@@ -92,6 +96,7 @@ device-type
 -----------
 
 Schema:
+```
 {
 "name"     : "optional name"
 "url"      : "/api/v1/devices-types/123",
@@ -99,6 +104,7 @@ Schema:
 "producturl": "https://www.example.com",   (if known)
 "manufacturer": "tbd"
 }
+```
 
 security-profiles
 -----------------
@@ -106,6 +112,7 @@ security-profiles
 * Security-Profile: a collection of security information.
 
 Schema:
+```
 {
 "name"     : "profile name"
 "url"      : "/api/v1/secrity-profiles/123",
@@ -120,6 +127,7 @@ Schema:
 "lan-incoming-ports"   : [ list-of-ports ],
 "wan-incoming-ports"   : [ list-of-ports ],
 }
+```
 
 We should ship with a dozen or so of these profiles, ready to be applied.
 
@@ -127,6 +135,7 @@ networks
 --------
 
 Schema:
+```
 {
 "name"     : "name of network (from luci interface)",
 "url"      : "/api/v1/networks/123",
@@ -134,6 +143,7 @@ Schema:
 "v6-prefixes" :["fe80::/10", "2607:f0b0:f:70::/64", "fd08:090a:1023:3456::/64"]
 "essid" : "abcd",
 }
+```
 
 
 
