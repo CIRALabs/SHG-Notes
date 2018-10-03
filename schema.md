@@ -37,12 +37,15 @@ administrators
 Schema:
 ```
 {
-"url"   : "/api/v1/administrator/123",
+ "_links": {
+    "self": {
+      "href": "/api/v1/administrator/123",
+    }
+  },
 "name"  : "firstname lastname",
-"login" : "fred",
-"email" : "fred@example.com",
 "admin" : true,
 "enabled": true,
+"prospective": false
 "lastlogin" : "2012-04-23T18:25:43.511Z",
 "publickey" : "base64-of-subjectpublicinfo-from-rfc5280",
 }
@@ -64,6 +67,8 @@ devices
 Schema:
 ```
 {
+"name"     : "Thing Upstairs",
+"fqdn"     : "http://example.com/product/thing",
 "url"      : "/api/v1/devices/123",
 "macaddres": "aa-bb-cc-00-11-22",
 "bytes" : [123478, 1245832],
@@ -72,13 +77,14 @@ Schema:
 "profile-applied" : "/api/v1/profiles/2345",
 "device-type" : "/api/v1/devicetypes/3456",
 "manufacturer": "tbd"
+
 -cut-
 "current-vlan" : "iot" | "trusted" | "appliances" ...,
 "device-category" : "tbd"
 "wan-enabled"  : true,
 "lan-enabled"  : true,
 "wan-restricted-to" : [ list-of-URLs, IPv4-subnets, IPv6-subnets ],
-"lan-restricted-to: : [ list-of-URLs, IPv4-subnets, IPv6-subnets ],
+"lan-restricted-to" : [ list-of-URLs, IPv4-subnets, IPv6-subnets ],
 "outgoing-ports"    : [ list-of-ports ],
 "lan-incoming-enabled" : [ list-of-origins ],
 "wan-incoming-enabled" : [ list-of-origins ],
