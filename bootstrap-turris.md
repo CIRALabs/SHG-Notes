@@ -23,7 +23,7 @@ perform the rsync.
 
     ssh-keygen
 
-4. send the /root/.ssh/id_rsa.pub key to me.
+4. Send the /root/.ssh/id_rsa.pub key to mcr@sandelman.ca.
 
 5. Now start an rsync of the container contents:
 
