@@ -10,8 +10,13 @@ A copy of the relevant file is at:
     ada93787e52948ca3b4dd1c2291e7e850811662ed747af7cdd646cf2d17c5017  omnia-medkit-4.0.tar.gz
 
 2. Boot system, preferably with a serial console.
-   If no serial console, then go through normal Turris setup, set up the
-   LUA root password, and then enable ssh, and login as root.
+The eth2 will be the uplink, plug it in.
+
+   {If no serial console, then go through normal Turris setup, set up the
+    LUA root password, and then enable ssh, and login as root.}
+
+   vi /etc/config/system   <- edit hostname.
+   reboot                  <- set hostname before running ssh-keygen.
 
 3. Some parts of the system are still based upon an rsync of an LXD container.
 This requires an ssh key to be populated to shg@shg.sandelman.ca in order to
@@ -27,6 +32,7 @@ perform the rsync.
 
 5. Now start an rsync of the container contents:
 
+    mkdir -p /srv
     host=shg.sandelman.ca
     rsync --rsync-path="rsync --fake-super" -x --delete -a -r --inplace --exclude=SWAP --exclude=/etc --partial shg@$host:/shg/builds/shgturris/srv/. /srv/.
 
@@ -47,10 +53,12 @@ perform the rsync.
    root@hera:~# opkg update
    Downloading http://herring.sandelman.ca/packages/arm_cortex-a9_vfpv3/ciralabs/Packages.gz
    ...
+   (check for "signature check passed" on all items)
 
 7. Install our components:
 
    opkg install mud-supervisor
+   opkg install lxc-attach lxc-start lxc-exec lxc-ls
 
 8. Reboot
 
