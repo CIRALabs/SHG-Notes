@@ -7,7 +7,7 @@ Problem Statement
 * SHG firmware and initial config should be loaded (e.g. flashed)  into the Home Gateway prior to sending the home gateway to the end-users.
 * To authenticate later in the provisioning process, each home gateway should have its specific basic key/cert.
 * Since we have a goal to have 100 units in alpha testing, the process to flash the SHG firmware and config should be automated as much as possible[a]
-* Solutions to the initial provisioning of the SHG firmware may depend on the actual home gateway model and firmware. Typically, the manufacturer firmware has an option to upload a new firmware from its admin config interface. For the Turris Omnia, we will use the USB stick (see 4 LEDs router re-flash). Preferably, the solution should be independent on the method to flash the SHG firmware.
+* Solutions to the initial provisioning of the SHG firmware may depend on the actual home gateway model and firmware. Typically, the manufacturer firmware has an option to upload a new firmware from its admin config interface. For the Turris Omnia, we will use the USB stick (see 4 LEDs router re-flash https://doc.turris.cz/doc/en/howto/omnia_factory_reset). Preferably, the solution should be independent on the method to flash the SHG firmware.
    * The old way of provisioning through Bootp-tftp process does not seem to be available/possible in these environments.
 * We should aim towards a solution that might be workable for hackers or partners (i.e. SIDN, Mozilla,....) or even advanced end-users with minimal requirements.
 
