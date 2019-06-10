@@ -1,0 +1,61 @@
+Secure Home Gateway meeting --- 2019-05-13, 15:00
+WEBEX AT:  https://cira-acei.webex.com/join/lucas.estienne
+
+
+Present: 
+    1. Lucas Estienne
+    2. Julien Bernard
+    3. Elson Oliveira
+    4. Audric Schiltknecht
+    5. Daniel Innes
+    6. Gillian Campbell
+    7. Michael Richardson
+    8. Marc Blanchet
+
+Regrets: Jacques
+
+0) core of smarkaklink.
+  a) all but last step of smarkaklink enabled.
+  b) may be able to do it all by Tuesday, shg_highway is returning voucher bound to wrong voucher.
+
+1) can Elson reproduce this on Wednesday?
+   everyone try to do provisioning independantly.
+   which comet server will we use?  
+
+2) what next after smarkaklink.
+  a) mobile APP
+  b) SPIN integration
+  c) DNS-publication.
+  d) we can move to beta1 of Turris OS4 (Audric to send link to medkit by end of day -> build new medkit once smarkaklink is completed)
+  
+  
+3) SPIN integration
+  a) how to include it into medkit
+  b) how to manage access to SPIN API through mud-supervisor Role Based Access Control
+  c) how to replace our firewall with SPIN their code.
+  -- can we ask some useful questions for SIDN people on Friday?
+  -> Audric will start working on a) & b) (at least). Try to at least have it compiling in background to see if there are any issues that can be raised on Friday call
+  
+
+3) Round table of people.
+  a) Lucas:
+  b) Julien: 
+  c) Elson:  still setting up SHG physical box.
+  d) Audric: smarkaklink, medkit to beta-01, WPA-PSK from mud-supervisor's DB
+  e) Daniel:
+  f) Gillian:
+  g) Michael:  worked on Front-end naming document with Daniel Migault, attended iot613, and worked on shg_mud_supervisor/smarkaklink.
+  h) Marc:
+  
+
+4) WPA-Key into database, and into hostapd. (AS)
+  - tried integration with hostapd... it is working!
+  - some path/SQL configuration. register.conf from hostapd custom package (https://github.com/CIRALabs/SHG-feeds/blob/wpa-psk-from-mud-supervisor/network/utils/shg-radius-configuration/files/radiusd.conf).
+  - Wifi is broken, mud-supervisor integration still needed, windex API still needed.
+  -> (Audric) Will put together a "hacked" mud-supervisor configuration (eg. static IP address on bridge) and create medkit so people can try generate WIFI password using Windex client
+
+5) what are the next steps for Mobile APP? 
+6) 
+
+15:40 closed.
+
