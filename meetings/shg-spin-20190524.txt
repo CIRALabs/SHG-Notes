@@ -1,0 +1,33 @@
+2019-05-24, 09:00
+SIDN-CIRA joint meeting
+
+Present: 
+    1. Michael Richardson
+    2. Ad Bresser
+    3. Julien Bernard
+    4. Audric Schiltknecht
+    5. Jacques Latour
+
+SPIN update
+- Move from kernel space to userspace. People not keen on kernel module as it could crash the gw
+- Use external integration eg. ubus
+- Bug fixes: block destination per device instead of the whole network. Support dotcircle(?) function. Some ISP will quarantine the connection, so usefull to have a DOTS API.
+- Finalize a whitepaper to reach out to CPE manufacturer.
+- Cooperation with CNR (https://www.cnr.it/en), Italy, wants to use Spin for local DPI.
+
+SHG
+- Investigated moving UCI from iptables to nftables to have better stats, JSON format output.
+- Issue with fw3 that uses iptables directly through private library
+- SPIN moving to iptables, but still export stats?
+  - Ad presents future architecture
+  - MCR asks if we can call spind RPC directly (or via UCI/UBUS)
+      - Spin based on nodes (cluster of IP addresses). Current API devised to work on nodes
+  - currently make nodes based upon traffic. not using facebook, then no facebook node.
+  - Audric: Possible to convert MUD -> SPIN profile and apply it on device?
+      - Ad: thinking about that, not yet found architecture. Looking into integrating MUD management
+  - Collaborate on mud-manager part. Only care about MUD file and generate rules.
+  - Discussion about mud-manager/mud-client. Need to work on bootstraping this issue.
+
+Ad to share the architecture document and envisionned API.
+
+Call with the group working on MUD integration in ~3 weeks: June 14th

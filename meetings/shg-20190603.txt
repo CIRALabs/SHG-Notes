@@ -1,0 +1,52 @@
+	Secure Home Gateway meeting --- 2019-06-03, 15:00
+WEBEX AT:  https://cira-acei.webex.com/meet/lucas.estienne
+
+
+Present: (please sign in)
+    1. Michael Richardson
+    2. Audric Schiltknecht
+    3. Gillian Campbell
+    4. Lucas Etienne
+    5. Andres Nunez
+    6. Daniel Innes
+    7. Jacques Latour
+    8. Marc Blanchet
+    9. Julien Bernard
+ 
+
+Demo (june 14th)
+- should be ok. Michael to redo the whole on-boarding/provisioning process
+- Lucas to run the demo
+
+L-Spark pitch (June 10)
+- use case: L-Spark enabled IoT device connecting back to the SHG using a secure tunnel
+- enroll the L-Spark enabled IoT device into the HG real (BRSKI)
+- instruct using kaklink with a domain name
+- DNSSEC DANE Based automated solution
+  1) BRSKI enrollment of L-Spark device into Domain Registrar (SHG MUD-Supervisor)
+  2) SHG<->L-Spark do Mozilla WoT API
+  3) Windex API used to instruct L-Spark to build VPN towards RFC4025 IPsec target (Windex API)
+
+- Andres: not started. looking for Wed meeting
+- Daniel: trying the L-Spark dev kit
+- Lucas: handover medkit/CI 
+- Gillian working on doc for medkit... doing a template
+  Audric and others to review
+  Andres to review as a newcomer
+- Andres looking for detailed user stories
+
+GITHUB URL: 
+- Gillian: end2end architecture diagram (from Jacques)
+- MCR: 
+
+OLD: 
+    * Michael/Lucas (Jacques) to work on dynamic DNS setup
+    * Demo at CIRA's on June 14th:
+    * Lucas/Andres/Michael to do a session introducing SHG/onboarding. Talk on Tues/Wed to schedule session
+    * goal for this week: get the whole provisioning process and WPA exercize and working for next monday in preparation for CIRA demo
+    
+NEW BUSINESS:
+ * Michael/Lucas (Jacques) to work on dynamic DNS setup.  Tuesday pm
+ * Lucas/Andres/Michael/Jacques/Gillian to do a session introducing SHG/onboarding. Wednesday pm
+
+

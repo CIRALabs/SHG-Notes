@@ -1,0 +1,83 @@
+Secure Home Gateway meeting --- 2019-06-03, 15:00
+WEBEX AT:  https://cira-acei.webex.com/meet/jacques.latour
+
+
+Present: (please sign in)
+	* Marc Blanchet
+	* Audric Schilknecht
+	* Jacques Latour
+	* Michael Richardson
+	* Gillian Campbell
+	* Lucas Estienne
+	* Daniel Innes
+	* Andres Nunez
+	* Julien Bernard
+
+L-Spark pitch 
+	* 20 min. pitch done by Jacques. 20 people in the room. investors.
+	* pitched:
+		* MASA for IoT-5G devices, integration with ISP (like Telus)
+	* next steps
+		* eSIM needs a root of trust. don't want to use current CAs ("too complicated")
+		* were interested in the DNSSEC root of trust
+		* if done by CIRA, then done within CIRA, not the SHG project.
+		* other reason: current certs lifetime is 2y, they would like 6 months
+		* other problem they have: sign code. Jacques: if linked with domains, maybe used for signing code
+		* CIRA projects:
+			* DNSSEC/MASA done by CIRA, not this project
+			* 
+
+Demo (June 14th)
+	* ready? Lucas and Michael: discuss on tuesday
+
+DNSUpdate
+	* Michael working on the spec:    https://docs.google.com/document/d/1PWYFrDLks0LpcWHFFemV5HlByxTWzDfl3HwTpohbfVM/edit?usp=sharing
+	* 
+
+Project plan
+	* Andres to write story with Jacques?
+		* Action: create milestones in SHG project and assign tasks/sub-tasks to them
+
+Around the table:
+	* Lucas working on MedKit.  MCR wants Lucas to do CI for Comet Server.
+	* Daniel worked on DNSMASQ->mud_supervisor.  Not what the project wants/needs from that link.  <INSERT STORY LINK>
+	* Andres had meeting with Michael (really useful). Put things into user stories. Break them into smaller pieces.
+	* Gillian, meeting was really useful.  Saw Audric's comments on medkit proceedure.  Michael asked for Icon library for documentation and presentations.
+	* Jacques did presentation to L-Spark
+	* Audric finished first proof of concept for SPIN integration into MUD-Supervisor, MUD-Supervisor to issue JWT to SPIN server.  Then started working on smarkaklink JAVA library. Will continue on that.
+	* Julien did not work on SHG past week.
+	* Michael was working on DNS spec, Tue/Wed training, smarkaklink step through, diagram with green status. still hoping to finish quickly.
+	* Marc: we will get Andres to work on User Stories and Marc will do some documentation on project 
+
+
+
+OLD NOTES
+Demo (june 14th)
+- should be ok. Michael to redo the whole on-boarding/provisioning process
+- Lucas to run the demo
+
+L-Spark pitch (June 10)
+- use case: L-Spark enabled IoT device connecting back to the SHG using a secure tunnel
+- enroll the L-Spark enabled IoT device into the HG real (BRSKI)
+- instruct using kaklink with a domain name
+- DNSSEC DANE Based automated solution
+  1) BRSKI enrollment of L-Spark device into Domain Registrar (SHG MUD-Supervisor)
+  2) SHG<->L-Spark do Mozilla WoT API
+  3) Windex API used to instruct L-Spark to build VPN towards RFC4025 IPsec target (Windex API)
+
+- Andres: not started. looking for Wed meeting
+- Daniel: trying the L-Spark dev kit
+- Lucas: handover medkit/CI 
+- Gillian working on doc for medkit... doing a template
+  Audric and others to review
+  Andres to review as a newcomer
+- Andres looking for detailed user stories
+
+GITHUB URL: 
+- Gillian: end2end architecture diagram (asked by Jacques)
+- MCR: write DNS architecture/requirement document for this week meeting
+    
+NEW BUSINESS:
+ * Michael/Lucas (Jacques) to work on dynamic DNS setup.  Tuesday pm
+ * Lucas/Andres/Michael/Jacques/Gillian to do a session introducing SHG/onboarding. Wednesday pm
+
